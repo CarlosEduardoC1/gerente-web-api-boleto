@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => ['apiJWT']], function(){
     Route::get('/users', 'Api\UserController@index');
+    Route::get('/boleto-index', 'Api\BoletoController@index');
 });
 
 Route::post('auth/login', 'Api\AuthController@login');
